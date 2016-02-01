@@ -1,6 +1,6 @@
-$(document).ready(function(){
+doMath();
 
-  doMath();
+$(document).ready(function(){
 
 });
 
@@ -13,25 +13,17 @@ function doMath() {
     num1 = parseFloat($('input#number1').val());
     num2 = parseFloat($('input#number2').val());
     operator = $('input#operation').val();
+    validate(operator, num1, num2);
   });
-  validate(operator, num1, num2);
 }
 
 function validate(operator, num1, num2) {
   // if (typeof num1 && typeof num2) == "number")
-  if (isNaN(num1) == false && isNaN(num2) == false) {
-    switch(operator) {
-      case "+":
-        result(operator, num1, num2);
-      case "-":
-        result(operator, num1, num2);
-      case "/":
-        result(operator, num1, num2);
-      case "*":
-        result(operator, num1, num2);
-      default:
-        return "Sorry, that is not a valid operator";
-        break;
+  if (!isNaN(num1) && !isNaN(num2)) {
+    if (operator == "+" || operator == "-" || operator == "/" || operator == "*") {
+      result(operator, num1, num2);
+    } else {
+      return("Sorry, that is not a valid operator");
     }
   } else {
     return "Sorry, one of those is not a valid number!";
@@ -39,7 +31,7 @@ function validate(operator, num1, num2) {
 }
 
 function result(operator, num1, num2) {
-  var result = eval(num1 + operator + num2);
-  $('#result').html(result);
-  return result;
+  var answer = eval(num1 + operator + num2);
+  $('#result').text(answer);
+  return answer;
 }
