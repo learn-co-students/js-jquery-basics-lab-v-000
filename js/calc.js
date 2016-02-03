@@ -14,8 +14,9 @@ function doMath() {
   $('button#equals').on('click', function() {
     var number1 = parseFloat(n1.val());
     var number2 = parseFloat(n2.val());
-    var operator = op;
+    var operator = op.val();
     validate(number1,operator,number2);
+    result(operator,number1,number2);
   });
 }
 
@@ -35,7 +36,9 @@ function validate(operator,number1,number2) {
 }
 
 function result(operator,num1,num2) {
-  return eval(num1.toString() + operator + num2.toString());
+  var answer = eval(num1.toString() + operator + num2.toString())
+  $('#result').html(answer)
+  return answer;
 }
 
 
