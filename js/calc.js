@@ -1,7 +1,7 @@
 
 
 $(document).ready(function(){
-
+  doMath();
 });
 
 var num1;
@@ -30,7 +30,7 @@ function validate(op, num1, num2){
 
 function result(op, num1, num2){
   var solution = varOperator(op, num1, num2);
-  $('#result').append(solution);
+  $('#result').text(solution);
   return solution;
 }
 
