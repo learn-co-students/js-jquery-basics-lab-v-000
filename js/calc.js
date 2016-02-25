@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 $(document).ready(function(){
@@ -54,3 +55,6 @@ function validate(operator, num1, num2){
     return 'Sorry, that is not a valid operator';
   }
 }
+=======
+
+>>>>>>> 46b100b0bfae04301f6d935783713ea13b675c50
