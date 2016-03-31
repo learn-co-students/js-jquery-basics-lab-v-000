@@ -8,9 +8,8 @@ var op = $('#operation');
 
 function doMath() {
   $('#equals').on('click', function() {
-    num1 = parseFloat(num1).val();
-    num2 = parseFloat(num2).val();
-    op = op.val()
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
     validate(op, num1, num2);
   });
 }
