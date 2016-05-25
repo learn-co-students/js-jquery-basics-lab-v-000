@@ -6,10 +6,10 @@ var solution;
 
 function doMath(){
 	$('#equals').on('click', function(){
-		num1 = Number(num1.val());
-		num2 = Number(num2.val());
-		operator = operator.val();
-		validate(operator,num1,num2);
+		n1 = Number(num1.val());
+		n2 = Number(num2.val());
+		opr = operator.val();
+		validate(opr,n1,n2);
 	});
 }
 
