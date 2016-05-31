@@ -18,7 +18,7 @@ function validate(operator, num1, num2){
   if (isNaN(num1) || isNaN(num2)) {
      return "Sorry, one of those is not a valid number!";
   }
-  else if (!["+", "-", "*", "/"].includes(operator)) {
+  else if (["+", "-", "*", "/"].indexOf(operator) === -1) {
      return "Sorry, that is not a valid operator";
   }
   else{
