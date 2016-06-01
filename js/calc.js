@@ -14,7 +14,7 @@ function doMath(){
     num1 = parseFloat(num1.val());
     num2 = parseFloat(num2.val());
     operator = operator.val();
-    validate(operator, num1, num2);
+    result(operator, num1, num2);
   });
 }  
 
@@ -24,13 +24,15 @@ function validate(operator, num1, num2) {
   } else if(isNaN(num1) || isNaN(num2)) {
     return "Sorry, one of those is not a valid number!";
   } else {
-    result(operator, num1, num2);
+    return true;
   }
 }
 
 function result(operator, num1, num2) {
   var answer = 0;
-  if(operator == "+") {
+  if (validate(operator, num1, num2) != true) {
+    answer = validate(operator, num1, num2);
+  } else if(operator == "+") {
     answer = num1 + num2;
   } else if(operator == "-") {
     answer = num1 - num2;
