@@ -18,7 +18,7 @@ function validate(op, num1, num2){
 
   if(op == "+" || op == "-" || op == "*" || op == "/"){
     if(isNaN(num1) || num1==='' || isNaN(num2) || num2 === ''){
-      $('#result').text('Sorry, one of those is not a valid number!');
+      $('#result').html('Sorry, one of those is not a valid number!');
       return 'Sorry, one of those is not a valid number!';
     }
     else{
@@ -29,6 +29,12 @@ function validate(op, num1, num2){
     $('#result').html("Sorry, that is not a valid operator");
     return "Sorry, that is not a valid operator"
   }
+}
+
+function result(op, num1, num2){
+  var total = eval(num1 + op + num2)
+  $('#result').html(total);
+  return total;
 }
 
 
