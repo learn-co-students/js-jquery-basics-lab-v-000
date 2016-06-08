@@ -11,10 +11,10 @@ function validate(operator, number1, number2) {
   opArray = ["+", "-", "*", "/"];
   n = $.inArray(operator, opArray);
   if (n > opArray.count || n < 0){
-    // alert("Sorry, that is not a valid operator") ;
+    alert("Sorry, that is not a valid operator");
     return "Sorry, that is not a valid operator";
   } else if (isNaN((number1)) || isNaN((number2))) {
-    // alert("Sorry, one of those is not a valid number!") ;
+    alert("Sorry, one of those is not a valid number!");
     return "Sorry, one of those is not a valid number!";
   } else {
     result(operator, number1, number2);
