@@ -14,9 +14,9 @@ describe('jQuery Calculator', function() {
     expect(myKey[0]).toEqual("click");
   });
 
-  it('#validate returns "Sorry, that is not a valid operator" if operator is not valid', function() {
+  it('#validate returns "Sorry, that is not a valid operator." if operator is not valid', function() {
 
-    expect(validate("j", 2, 3)).toEqual("Sorry, that is not a valid operator");
+    expect(validate("j", 2, 3)).toEqual("Sorry, that is not a valid operator.");
 
   });
 
@@ -35,4 +35,3 @@ describe('jQuery Calculator', function() {
 
 
 });
-  
