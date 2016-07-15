@@ -28,6 +28,7 @@ function validate(operator, num1, num2) {
   } else {
     return "Sorry, that is not a valid operator";
   }
+  result(operator, num1, num2);
 }
 
 function result(operator, num1, num2) {
