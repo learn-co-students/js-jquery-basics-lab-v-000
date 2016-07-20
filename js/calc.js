@@ -1,39 +1,48 @@
 'use strict';
 
+$(document).ready(function() {
+ 
+
+   doMath();
+}); 
+
 function doMath() {
-  var f = $('#operation')[0].value;
-  var numb1 = $('#number1')[0].value;
-  var numb2 = $('#number2')[0].value;
-  $('#equals').on('click', function(f, numb1, numb2) {
-    if (validate(f, numb1, numb2) !== true) {
+
+ 
+  $('#equals').on('click', function() {
+      var f = $('#operation').val();
+  var numb1 = $('#number1').val();
+  var numb2 = $('#number2').val();
+     
       return validate(f, numb1, numb2)
 
     }
-    else {
-      $('#result').val(result(f, numb1, numb2))
-    }
-  });
+ 
+  );
 
 
 }
 
 
 function validate(operator, num1, num2) {
-  var f = operator;
-  var numb1 = num1
-  var numb2 = num2
+ 
   var operators = ["+", "-", "*", "/"];
-  if (!operators.includes(f)) {
+  if (!operators.includes(operator)) {
+    console.log('operator')
+    $('#result').text('Sorry, that is not a valid operator')
     return "Sorry, that is not a valid operator";
   }
-  else if (isNaN(numb1)) {
+  else if (isNaN(num1)) {
+    $('#result').text('Sorry, one of those is not a valid number!')
     return "Sorry, one of those is not a valid number!";
   }
-  else if (isNaN(numb2)) {
+  else if (isNaN(num2)) {
+     $('#result').text('Sorry, one of those is not a valid number!')
     return "Sorry, one of those is not a valid number!";
   }
   else {
-    return true
+     $('#result').text(result(operator, num1, num2))
+    return result(operator, num1, num2)
   }
   
 
@@ -63,8 +72,3 @@ function result(operator, num1, num2) {
 
 
 
-$(document).ready(function() {
- 
-
-   doMath();
-}); 
