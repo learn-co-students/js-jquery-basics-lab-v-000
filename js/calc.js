@@ -4,63 +4,64 @@ $(document).ready(function(){
 
 });
 
-    var numberone = Number($("#number1").val());
-    var numbertwo = Number($("#number2").val());
-    var operation = $("#operation").val();
+    var num1 = $("#number1");
+    var num2 = $("#number2");
+    var operator = $("#operation");
 
 
 function doMath(){
   $("#equals").click(function(){
-    num1 = parseFloat(numberone.val());
-    num2 = parseFloat(numbertwo.val());
-    operator = operation.val();
+    debugger;
+    num1 = parseFloat(num1.val());
+    num2 = parseFloat(num2.val());
+    operator = operator.val();
     validate(operator,num1,num2);
-  })
+  });
 }
 
 
 
-function result(operator,number1,number2){
+function result(operator,num1,num2){
 
 
   if (operator == '+'){
-    $('#result').html(number1 + number2);
-    return number1 + number2;
+    $('#result').html(num1 + num2);
+    return num1 + num2;
   }
 
   else if (operator == "-"){
-    $('#result').html(number1 - number2);
-    return number1 - number2;
+    $('#result').html(num1 - num2);
+    return num1 - num2;
   }
 
   else if (operator == "*"){
-    $('#result').html(number1 * number2);
-    return number1 * number2;
+    $('#result').html(num1 * num2);
+    return num1 * num2;
   }
 
   else if (operator == "/"){
-    $('#result').html(number1 / number2);
-    return number1 / number2;
+    $('#result').html(num1 / num2);
+    return num1 / num2;
   }
   
 }
 
 
-function validate(operator,number1,number2){
+function validate(operator,num1,num2){
 
 if (operator == "-" || operator == "+" || operator == "/" || operator == "*"){
-  if (isNaN(number1) || number1 === '' || isNaN(number2) || number2 === ''){
+  if (isNaN(num1) || num1 === '' || isNaN(num2) || num2 === ''){
     $("#result").text('Sorry, one of those if not a valid number');
     return 'Sorry, one of those is not a valid number!'
   }
   else {
-    result(operator, number1, number2);
+    result(operator, num1, num2);
   }
 }
 
   else {
     $('#result').html("Sorry, that is not a valid operator");
-    return "Sorry, that is not a valid operator";
+    return "Sorry, that is not a valid operator"
   }
 
 }
