@@ -1,0 +1,18 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'access' ]
+2 info using npm@3.10.3
+3 info using node@v6.5.0
+4 verbose stack Error: no package name passed to command and no package.json found
+4 verbose stack     at /usr/lib/node_modules/npm/lib/access.js:119:16
+4 verbose stack     at ReadFileContext.<anonymous> (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:90:21)
+4 verbose stack     at ReadFileContext.callback (/usr/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16)
+4 verbose stack     at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:365:13)
+5 verbose cwd /home/mcglaser/code/labs/js-jquery-basics-lab-v-000
+6 error Linux 3.13.0-79-generic
+7 error argv "/usr/bin/nodejs" "/usr/bin/npm" "access"
+8 error node v6.5.0
+9 error npm  v3.10.3
+10 error no package name passed to command and no package.json found
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]
