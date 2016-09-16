@@ -1,0 +1,21 @@
+{
+  "name": "js-jquery-basics-lab-v-000",
+  "homepage": "https://github.com/dukeoflaser/js-jquery-basics-lab-v-000",
+  "authors": [
+    "Nathaniel Miller <dukeoflaser@gmail.com>"
+  ],
+  "description": "jquery lab",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jasmine-jquery": "^2.1.1"
+  }
+}
