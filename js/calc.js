@@ -1,25 +1,28 @@
+$(document).ready(function() {
+  doMath;
+});
+
 var num_1, num_2, operation;
 
 function doMath() {
-  $('button#equals').on("click", function() {
+  $('#equals').on("click", function() {
   num_1 = Number($('input#number1').val());
   num_2 = Number($('input#number2').val());
   operation = $('input#operation').val();
   });
+  validate(operation, num_1, num_2);
 }
 
 function validate(op, num_1, num_2) {
-  if ( num_2.constructor.name != "Number") {
+  if (num_2.constructor.name != "Number" || num_1.constructor.name != "Number") {
+    alert("Sorry, one of those is not a valid number!");
     return "Sorry, one of those is not a valid number!";
-  } else if (num_1.constructor.name != "Number") {
-    return "Sorry, one of those is not a valid number!";
-  }
-  if (op === "/" || op === "-" || op === "+" || op === "*") {
-    // nada
-  } else {
+  } else if (op != "/" || op != "-" || op != "+" || op != "*") {
+    alert("Sorry, that is not a valid operator");
     return "Sorry, that is not a valid operator";
+  } else {
+    result(op, num_1, num_2);
   }
-  return true;
 }
 
 function result(operation, num_1, num_2) {
@@ -32,18 +35,6 @@ function result(operation, num_1, num_2) {
   }else if (operation === "+") {
     var answer = num_1 + num_2;
   }
+  $('#result').html(answer);
   return answer;
 }
-
-$(document).ready(function() {
-  debugger;
-  doMath();
-  if (validate(operation, num_1, num_2)) {
-    var answer = result(operation, num_1, num_2);
-    $('h1').HTML = answer;
-  } else {
-    alert(validate(operation, num_1, num_2));
-  }
-});
-
-
