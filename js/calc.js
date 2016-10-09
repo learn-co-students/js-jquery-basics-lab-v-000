@@ -9,8 +9,8 @@ $(document).ready(function(){
 
 function doMath(){
   $('#equals').on('click', function(){
-    num1 = parseInt(num1.val());
-    num2 = parseInt(num2.val());
+    num1 = parseInt(this.val());
+    num2 = parseInt(this.val());
     operator = operator.val();
     validate(operator, num1, num2);
   });
