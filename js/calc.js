@@ -2,15 +2,20 @@ $(document).ready(function() {
   doMath();
 });
 
+  var num1 = $('#number1').val();
+  num1 = parseInt(num1);
+  var operator = $('#operation').val();
+  var num2 = $('#number2').val();
+  num2 = parseInt(num2);
 
 function doMath() {
   $('#equals').on('click', function() {
     var num1 = $('#number1').val();
-    num1 = parseInt(num1)
+    num1 = parseInt(num1);
     var operator = $('#operation').val();
     var num2 = $('#number2').val();
-    num2 = parseInt(num2)
-    validate(operator, num1, num2)
+    num2 = parseInt(num2);
+    validate(operator, num1, num2);
   });
 }
 
