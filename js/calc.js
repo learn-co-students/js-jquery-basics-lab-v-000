@@ -1,3 +1,9 @@
+$(document).ready(function(){
+
+  doMath();
+
+});
+
 var num1 = $("#number1");
 var num2 = $("#number2");
 var operator = $('#operation');
@@ -12,8 +18,9 @@ function doMath() {
 }
 
 function validate(operator, num1, num2) {
-  let validOps = ['+', '-', '*', '/']
-  if (validOps.includes(operator)) {
+  // var validOps = ['+', '-', '*', '/']
+  // if (validOps.includes(operator)) { ## Test didn't like this set up but would work normally
+  if (operator == "+" || operator == "-" || operator == "*" || operator == "/") {
     if ( num1 === '' || isNaN(num1) || num2 === '' || isNaN(num2) ) {
       $("#result").text('Sorry, one of those is not a valid number!');
       return 'Sorry, one of those is not a valid number!'
@@ -45,8 +52,3 @@ function result(operator, num1, num2) {
   }
 }
 
-$(document).ready(function(){
-
-  doMath();
-
-});
