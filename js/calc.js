@@ -19,10 +19,26 @@ function validate(operator, number1, number2) {
   }
 }
 
+// function result(operator, number1, number2) {
+//   var answer = eval(number1 + operator + number2);
+//   $("#result").val(answer);
+//   return answer;
+// }
+
 function result(operator, number1, number2) {
-  var answer = eval(number1 + operator + number2);
-  $("#result").val(answer);
-  return answer;
+  if (operator === "+") {
+    $('#result').append(number1 + number2);
+    return number1 + number2;
+  } else if (operator === "-") {
+    $('#result').append(number1 + number2);
+    return number1 - number;
+  } else if (operator === "*") {
+    $('#result').append(number1 + number2);
+    return number1 * number2;
+  } else if (operator === "/") {
+    $('#result').append(number1 + number2);
+    return number1 / number2;
+  }
 }
 
 $(document).ready(function() {
