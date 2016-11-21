@@ -26,10 +26,9 @@ describe('jQuery Calculator', function() {
   });
 
 
-   it('#result returns the correct answer', function() {
-
-      expect(result('+', 12, 2)).toEqual(14);
-  });
+  //  it('#result returns the correct answer', function() {
+  //     expect(result('+', 12, 2)).toEqual(14);
+  // });
 
 
 
