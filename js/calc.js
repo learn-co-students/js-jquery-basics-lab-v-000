@@ -10,9 +10,14 @@ function doMath(){
     var num2 = parseInt($('#number2').val());
     var operation  = $('#operation').val();
     if(validate(operation,num1,num2)===true){
-        $('#result').html(eval(num1+operation+num2)) ;
+        result(operation,num1,num2);
     }
   });
+}
+
+function result(operation,num1,num2){
+  $('#result').html(eval(num1+operation+num2));
+  return eval(num1+operation+num2);
 }
 
 function validate(operation,num1,num2){
