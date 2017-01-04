@@ -21,13 +21,19 @@ function validate(operation, number1, number2) {
     return "Sorry, that is not a valid operator";
 
   } else {
-    result(operation, number1, number2)
+    result(operation, number1, number2);
   };
 };
 
 function result(operator, number1, number2) {
-  var math = number1 + operator + number2;
-  var result = eval(math)
+  var math_it_up = {
+    '+': function (x, y) {return x + y},
+    '-': function (x, y) {return x - y},
+    '*': function (x, y) {return x * y},
+    '/': function (x, y) {return x / y}
+  };
+
+  var result = math_it_up[operator](number1, number2)
 
   $('#result').text(result);
   return result;
