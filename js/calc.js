@@ -1,6 +1,6 @@
-//var num1 = NaN;
-//var num2 = NaN;
-//var op = null;
+var num1 = NaN;
+var num2 = NaN;
+var op = null;
 
 function doMath() {
   $("#equals").on("click", function() {
@@ -36,6 +36,7 @@ function result(op, num1, num2) {
 }
 
 
+
 $(document).ready(function() {
   var num1 = NaN;
   var num2 = NaN;
@@ -43,4 +44,3 @@ $(document).ready(function() {
   doMath();
 
 });
-
