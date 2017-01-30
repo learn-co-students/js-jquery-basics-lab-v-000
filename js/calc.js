@@ -1,6 +1,8 @@
 var num1 = NaN;
 var num2 = NaN;
 var op = null;
+var operators = [];
+var ans = null;
 
 function doMath() {
   $("#equals").on("click", function() {
@@ -13,7 +15,7 @@ function doMath() {
 
 
 function validate(op, num1, num2) {
-  var operators = ["+", "-", "*", "/"];
+  operators = ["+", "-", "*", "/"];
 
   if (!(operators.includes(op))) {
     $("#result").text("Sorry, that is not a valid operator");
@@ -41,6 +43,8 @@ $(document).ready(function() {
   var num1 = NaN;
   var num2 = NaN;
   var op = null;
+  var operators = [];
+  var ans = null;
   doMath();
 
 });
