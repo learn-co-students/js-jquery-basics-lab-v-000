@@ -28,50 +28,13 @@ function validate(op, num1, num2) {
   }
 }
 
-/*
+
 function result(op, num1, num2) {
   ans = (eval(num1 + op + num2));
   $("#result").text(ans);
   return ans;
 }
-*/
 
-
-  function result(operation, number1, number2) {
-
-    switch(operation) {
-
-      case '+': $result.text(number1 + number2); 
-
-        return number1 + number2;
-
-        break;
-
-      case '-': $result.text(number1 - number2); 
-
-      return number1 - number2;
-
-        break;
-
-      case '*': $result.text(number1 * number2); 
-
-      return number1 * number2;
-
-        break;
-
-      case '/': $result.text(number1 / number2); 
-
-      return number1 / number2;
-
-        break;
-
-      default : $result.text('Sorry, that is not a valid operator');
-
-        return 'Sorry, that is not a valid operator'        
-
-    }
-
-  }
 
 $(document).ready(function() {
   var num1 = NaN;
