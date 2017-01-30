@@ -19,7 +19,7 @@ function validate(op, num1, num2) {
     $("#result").text("Sorry, that is not a valid operator");
     return "Sorry, that is not a valid operator";
 
-  } else if ( (num1 == "") || (num2 == "") || (isNaN(num1)) || (isNaN(num2)) ) {
+  } else if ( (isNaN(num1)) || (isNaN(num2)) ) {
     $("#result").text("Sorry, one of those is not a valid number!");
     return "Sorry, one of those is not a valid number!";
 
