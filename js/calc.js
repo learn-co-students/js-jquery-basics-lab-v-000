@@ -17,13 +17,13 @@ function doMath() {
 function validate(op, num1, num2) {
   operators = ["+", "-", "*", "/"];
 
-  if (!(operators.includes(op))) {
-    $("#result").text("Sorry, that is not a valid operator");
-    return "Sorry, that is not a valid operator";
-
-  } else if ( (isNaN(num1)) || (isNaN(num2)) ) {
+  if ( (isNaN(num1)) || (isNaN(num2)) ) {
     $("#result").text("Sorry, one of those is not a valid number!");
     return "Sorry, one of those is not a valid number!";
+
+  } else if (!(operators.includes(op))) {
+    $("#result").text("Sorry, that is not a valid operator");
+    return "Sorry, that is not a valid operator";
 
   } else {
     result(op, num1, num2);
