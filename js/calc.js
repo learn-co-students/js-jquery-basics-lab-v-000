@@ -23,11 +23,24 @@ function validate(operator, num1, num2) {
     $("#result").text("Sorry, that is not a valid operator");
     return 'Sorry, that is not a valid operator'
   } else {
-    result(operator, number1, number2);
+    result(operator, num1, num2);
   }
 }
 
-function result(operator, number1, number2) {
-
+function result(operator, num1, num2) {
+  if (operator == '+') {
+    $('#result').html(num1 + num2);
+    return num1 + num2;
+  }
+  else if (operator == '-') {
+    $('#result').html(num1 - num2);
+    return num1 - num2;
+  } else if (operator == '*') {
+    $('#result').html(num1 * num2);
+    return num1 * num2;
+  } else if (operator == '/') {
+    $('#result').html(num1 / num2);
+    return num1 / num2;
+  }
 }
 
