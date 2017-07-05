@@ -14,19 +14,36 @@ function doMath() {
 }
 
 
-function validate(op, num1, num2) {
-  operators = ["+", "-", "*", "/"];
+// function validate(op, num1, num2) { //Original version, not sure what the issue is.
+//   var operators = ["+", "-", "*", "/"];
 
-  if ( (isNaN(num1)) || (isNaN(num2)) ) {
-    $("#result").text("Sorry, one of those is not a valid number!");
-    return "Sorry, one of those is not a valid number!";
+//   if ( (isNaN(num1)) || (isNaN(num2)) ) {
+//     $("#result").text("Sorry, one of those is not a valid number!");
+//     return "Sorry, one of those is not a valid number!";
 
-  } else if (!(operators.includes(op))) {
-    $("#result").text("Sorry, that is not a valid operator");
-    return "Sorry, that is not a valid operator";
+//   } else if (!(operators.includes(op))) {
+//     $("#result").text("Sorry, that is not a valid operator");
+//     return "Sorry, that is not a valid operator";
 
-  } else {
-    result(op, num1, num2);
+//   } else {
+//     result(op, num1, num2);
+//   }
+// }
+
+function validate(operator, num1, num2) { // Official solution
+  debugger;
+  if (operator == "+" || operator == "-" || operator == "*" || operator == "/"){
+    if (isNaN(num1) || num1 === '' || isNaN(num2) || num2 === '' ){
+      $("#result").text('Sorry, one of those is not a valid number!');
+      return 'Sorry, one of those is not a valid number!'
+    }
+    else {
+      result(operator, num1, num2);
+    }
+  }
+  else {
+    $('#result').html("Sorry, that is not a valid operator");
+    return "Sorry, that is not a valid operator"
   }
 }
 
