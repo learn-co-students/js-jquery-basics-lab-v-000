@@ -14,14 +14,16 @@ describe('jQuery Calculator', function() {
     expect(myKey[0]).toEqual("click");
   });
 
-  it('#validate returns "Sorry, that is not a valid operator" if operator is not valid', function() {
 
-    expect(validate("j", 2, 3)).toEqual("Sorry, that is not a valid operator");
-
-  });
 
   it('#validate returns "Sorry, one of those is not a valid number!" if a number is not valid', function() {
       expect(validate("+", 12, "kevin")).toEqual("Sorry, one of those is not a valid number!");
+
+  });
+
+    it('#validate returns "Sorry, that is not a valid operator" if operator is not valid', function() {
+
+    expect(validate("j", 2, 3)).toEqual("Sorry, that is not a valid operator");
 
   });
 
